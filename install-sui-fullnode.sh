@@ -137,8 +137,7 @@ if [[ `service suid status | grep active` =~ "running" ]]; then
 
   echo -e "\e[31m [Stop Node] \e[39m"
   echo -e "\e[1m\e[39msudo systemctl stop suid\e[0m"
-  echo -e "\e[1m\e[39m"    curl -s -X POST http://127.0.0.1:9000 -H \'Content-Type: application/json\' -d \'\{ \"jsonrpc\":\"2.0\", \"method\":\"rpc.discover\",\"id\":1\}\' \| jq .result.info" \n \e[0m"
-  echo -e "\e[1m\e[39m"    journalctl -u suid -f -o cat" \n \e[0m"
+  journalctl -u suid -f -o cat
 
 else
   echo -e "Your Sui Node \e[31mwas not installed correctly\e[39m, please reinstall."
