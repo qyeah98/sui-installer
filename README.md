@@ -27,7 +27,7 @@ chmod +x install-sui-fullnode.sh
 INPUT your github url: 
 
 # Example
-INPUT your github url: https://github.com/qyeah98/sui
+INPUT your github url: https://github.com/qyeah98/sui.git
 ```
 
 ### input y if you want to open Sui JSON RPC Port
