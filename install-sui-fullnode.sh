@@ -131,7 +131,10 @@ echo -e "\e[1m\e[32m9. Info\e[0m" && sleep 1
 if [[ `service suid status | grep active` =~ "running" ]]; then
   echo -e "Your Sui Node \e[32minstalled and works\e[39m!"
   echo -e "You can check node status by the command \e[7mservice suid status\e[0m"
-
+  IP=curl inet-ip.info
+  
+  echo -e "Write down \e[32m$IP:9000\e[39m at #📋・node-ip-application"
+  
   echo -e "\e[31m [Restart Node] \e[39m"
   echo -e "\e[1m\e[39msudo systemctl restart suid\e[0m"
 
